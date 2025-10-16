@@ -10,12 +10,12 @@ const form = document.getElementById("feedback-form");
 
 form.addEventListener("mouseover", function (event) {
   if (event.target.tagName === "INPUT" || event.target.tagName === "TEXTAREA") {
-    event.target.title = "Please fill out this field"; // basic tooltip
+    event.target.title = "Please fill out this field";
   }
 });
 
 form.addEventListener("submit", function (event) {
-  event.preventDefault(); // stop the page from refreshing
+  event.preventDefault();
 
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
