@@ -1,9 +1,8 @@
-const entry = document.createElement("div")
-entry.textContent = "Hello from JS";
+const commentsBox = document.getElementById("comments");
+const charCount = document.getElementById("char-count");
 
-document.getElementById("comments_here").appendChild(entry);
+commentsBox.addEventListener("input", function () {
+  const count = commentsBox.value.length;
+  charCount.textContent = count + " / 250";
+});
 
-document.querySelector(".submit").addEventListener("click", () => {
-    alert("Submitted!");
-
-})
