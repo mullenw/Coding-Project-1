@@ -12,3 +12,9 @@ form.addEventListener("mouseover", function (event) {
     event.target.title = "Please fill out this field"; // basic tooltip
   }
 });
+form.addEventListener("submit", function (event) {
+  event.preventDefault(); // stop the page from refreshing
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const comments = commentsBox.value.trim();
