@@ -5,6 +5,7 @@ commentsBox.addEventListener("input", function () {
   const count = commentsBox.value.length;
   charCount.textContent = count + " / 250";
 });
+
 const form = document.getElementById("feedback-form");
 
 form.addEventListener("mouseover", function (event) {
@@ -12,6 +13,7 @@ form.addEventListener("mouseover", function (event) {
     event.target.title = "Please fill out this field"; // basic tooltip
   }
 });
+
 form.addEventListener("submit", function (event) {
   event.preventDefault(); // stop the page from refreshing
 
@@ -22,7 +24,12 @@ form.addEventListener("submit", function (event) {
     alert("Please fill out all fields before submitting!");
     return;
 }});
+
  const entry = document.createElement("div");
   entry.textContent = name + " (" + email + "): " + comments;
   const display = document.getElementById("feedback-display");
   display.appendChild(entry);
+
+    form.reset();
+  charCount.textContent = "0 / 250";
+    alert("Feedback submitted!");
