@@ -22,3 +22,5 @@ form.addEventListener("submit", function (event) {
     alert("Please fill out all fields before submitting!");
     return;
 }});
+ const entry = document.createElement("div");
+  entry.textContent = name + " (" + email + "): " + comments;
