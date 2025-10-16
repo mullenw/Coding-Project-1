@@ -24,3 +24,5 @@ form.addEventListener("submit", function (event) {
 }});
  const entry = document.createElement("div");
   entry.textContent = name + " (" + email + "): " + comments;
+  const display = document.getElementById("feedback-display");
+  display.appendChild(entry);
