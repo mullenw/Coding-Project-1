@@ -18,3 +18,7 @@ form.addEventListener("submit", function (event) {
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
   const comments = commentsBox.value.trim();
+ if (name === "" || email === "" || comments === "") {
+    alert("Please fill out all fields before submitting!");
+    return;
+}});
