@@ -4,3 +4,6 @@
 .w3-border {
   border: 1px solid #ccc;
 }
+*, *:before, *:after {
+  box-sizing: border-box;
+}
