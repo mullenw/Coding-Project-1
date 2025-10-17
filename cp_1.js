@@ -17,19 +17,23 @@ form.addEventListener("mouseover", function (event) {
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const comments = commentsBox.value.trim();
- if (name === "" || email === "" || comments === "") {
+  const nameValue = document.getElementById("name").value.trim();
+  const emailValue = document.getElementById("email").value.trim();
+  const commentsValue = commentsBox.value.trim();
+
+  if (nameValue === "" || emailValue === "" || commentsValue === "") {
     alert("Please fill out all fields before submitting!");
     return;
-}});
+  }
 
- const entry = document.createElement("div");
-  entry.textContent = name + " (" + email + "): " + comments;
+  const entry = document.createElement("div");
+  entry.textContent = nameValue + " (" + emailValue + "): " + commentsValue;
+
   const display = document.getElementById("feedback-display");
   display.appendChild(entry);
 
-    form.reset();
+  form.reset();
   charCount.textContent = "0 / 250";
-    alert("Feedback submitted!");
+
+  alert("Feedback submitted!");
+});
